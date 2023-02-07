@@ -1,9 +1,14 @@
 import React from "react";
-import * as C from "./style"
+import ResumeItem from "../ResumeItem";
+import * as C from "./style";
 
 const Resume = () => {
     return(
-        <C.Container>TEsrte</C.Container>
+        <C.Container>
+            <ResumeItem title="Entradas" value="1000" />
+            <ResumeItem title="Saídas" value="1000" />
+            <ResumeItem title="Total" value="1000"/>
+        </C.Container>
     );
 };
 
