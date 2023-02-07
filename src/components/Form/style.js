@@ -36,13 +36,16 @@ border: 1px solid #ccc;
 
 `;
 
-export const RadioGruop = styled.div`
+export const Label = styled.label``;
+
+export const RadioGroup = styled.div`
 
 display: flex;
 align-items: center;
 
 input{
-    margin-lef: 20px;
+    margin-left: 20px;
+    margin-right: 5px;
     accent-color: black;
     margin-top: 0;
 }
@@ -57,5 +60,6 @@ border-radius: 5px;
 cursor: pointer;
 color: white;
 background-color: teal;
+margin-left:30px
 
 `;

@@ -2,12 +2,12 @@ import React from "react";
 import ResumeItem from "../ResumeItem";
 import * as C from "./style";
 
-const Resume = () => {
+const Resume = ({income, expense, total}) => {
     return(
         <C.Container>
-            <ResumeItem title="Entradas" value="1000" />
-            <ResumeItem title="Saídas" value="1000" />
-            <ResumeItem title="Total" value="1000"/>
+            <ResumeItem title="Entradas" value={income} />
+            <ResumeItem title="Saídas" value={expense} />
+            <ResumeItem title="Total" value={total} />
         </C.Container>
     );
 };
