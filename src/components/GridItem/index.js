@@ -7,10 +7,10 @@ const GridItem = ({item, onDelete }) => {
             <C.Td>{item.desc}</C.Td>
             <C.Td>{item.amount}</C.Td>
             <C.Td alignCenter>
-                {item.expense ? (<button>Despesa</button>) : (<button>Receita</button>)}
+                {item.expense ? (<C.Label>Despesa</C.Label>) : (<C.Label color={'g'}>Receita</C.Label>)}
             </C.Td>
             <C.Td alignCenter>
-                <button onClick={() => onDelete(item.id)}>Deletar</button>
+                <C.Button onClick={() => onDelete(item.id)}>Deletar</C.Button>
             </C.Td>
         </C.Tr>
     )
