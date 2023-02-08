@@ -6,7 +6,7 @@ import Resume from "./components/Resume"
 import Form from "./components/Form"
 
 const App = () => {
-    
+
   const data = localStorage.getItem("transactions");
   const [transactionsList, setTransactionsList] = useState(
     data ? JSON.parse(data) : []
@@ -46,7 +46,7 @@ const App = () => {
     <div>
         <Header />
         <Resume income={income} expense={expense} total={total} />
-        <Form handleAdd={handleAdd}/>
+        <Form handleAdd={handleAdd} transactionsList={transactionsList} setTransactionsList={setTransactionsList}/>
         <Global />
     </div>
     )

@@ -1,13 +1,14 @@
 import { useState } from "react";
 import * as C from "./style"
+import Grid from "../Grid";
 
-const Form = ({handleAdd}) => {
+const Form = ({handleAdd, transactionsList ,setTransactionsList}) => {
 
     const [desc, setDesc] = useState("");
     const [amount, setAmount] = useState("");
     const [isExpense, setExpense] = useState(false);
 
-    const generateID = () => Math.round(Math.random() * 1000);
+    const generateID = () => Math.round(Math.random() * 100000);
 
     const handleSave = () => {
         if(!desc || !amount){
@@ -58,6 +59,7 @@ const Form = ({handleAdd}) => {
                 </C.RadioGroup>
 
             </C.Container>
+            <Grid itens={transactionsList}  setItens={setTransactionsList}/>
         </>
     )
 }
